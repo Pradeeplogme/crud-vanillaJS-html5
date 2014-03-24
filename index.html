@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang='en'> <!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Students Database - CRUD with JavaScript & HTML5</title>
+	<meta name="description" content="CI&T Students Database">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	
+	<header class='container'>
+		<hgroup>
+			<h1><img src="images/logo.png" alt="Students Database"></h1>
+			<h2 class='subtitle'>Students Database</h2>
+		</hgroup>
+	</header>
+
+	<section class='container'>
+		<p class='tip'>Welcome to our Students Database! It is as simple as possible, just add the data in the input below and store it!</p>
+
+		<p class='tip'>And if you want to update the name of a student, just click above the field, change data and click on <em>✔</em> button. <br>
+		If you want to clear all registers, just click in "Reset DB"</p>
+
+		<div id="statusDb">DB Operations Status</div>
+	</section>
+
+	<section class='container'>
+		<input type="text" id='inputData' class='input box' placeholder='Input Name Here...'  maxlength=35>
+	    <input type="submit" id='storeData' value='Store!' class='input btn'>
+
+	    <table>
+			<thead>
+				<th class='table-head table-id'>ID</th>
+				<th class='table-head table-name'>Name</th>
+				<th id='cleanDb' class='table-head table-reset'>Reset DB</th>
+			</thead>
+			<tbody id='list'></tbody>
+	    </table>
+	</section>
+
+	<footer class='container'>
+		
+	</footer>
+
+	<script src='js/main.js'></script>
+</body>
+</html>
